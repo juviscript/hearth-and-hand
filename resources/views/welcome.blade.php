@@ -17,10 +17,13 @@
     <h1 class="text-center">Hearthstone App Title</h1>
 
 <div class="container mx-auto my-5 bg-orange-200 h-1/2">
-Hello
 
-    {{$card['id']}}
-    <img src="{{$card['image']}}" />
+<div class="flex flex-wrap justify-center">
+@foreach ($cards['cards'] as $card)
+    <img alt="{{$card['id']}}" src="{{$card['image']['en_US']}}" width="200"/>
+@endforeach
+</div>
+
 </div>
 </body>
 </html>
